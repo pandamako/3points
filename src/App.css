@@ -18,11 +18,6 @@
   font-size: large;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
 .container li {
   list-style: none;
 }

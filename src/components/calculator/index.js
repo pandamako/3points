@@ -37,13 +37,25 @@ class Calculator extends Component {
 
   render() {
     return (
-      <div {...this.props} className="container">
-        <Input onChange={this.setOptimistic}/>
-        <Input onChange={this.setReal}/>
-        <Input onChange={this.setPessimistic}/>
-        <span>
-          {this.result()}
-        </span>
+      <div {...this.props} className="calculator-container">
+        <div className="calculator-cell">
+          <label htmlFor="optimistic">Optimistic</label>
+          <Input id="optimistic" className="calculator-input" onChange={this.setOptimistic}/>
+        </div>
+        <div className="calculator-cell">
+          <label htmlFor="real">Real</label>
+          <Input id="real" className="calculator-input" onChange={this.setReal}/>
+        </div>
+        <div className="calculator-cell">
+          <label htmlFor="pessimistic">Pessimistic</label>
+          <Input id="pessimistic" className="calculator-input" onChange={this.setPessimistic}/>
+        </div>
+        <div className="calculator-cell">
+          <label htmlFor="result">95% estimate</label>
+          <span id="result" className="calculator-input result">
+            {this.result()}
+          </span>
+        </div>
       </div>
     );
   }

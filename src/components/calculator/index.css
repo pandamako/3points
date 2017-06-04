@@ -1,0 +1,25 @@
+.calculator-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.calculator-input {
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.calculator-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.calculator-cell label {
+  display: inline-flex;
+}
+
+.calculator-cell .result {
+  display: inline-flex;
+  margin-right: 0px;
+  justify-content: flex-end;
+}
