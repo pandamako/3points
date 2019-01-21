@@ -1,17 +1,24 @@
 .calculator-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .calculator-container {
+    flex-direction: row;
+  }
 }
 
 .calculator-input {
   margin-top: 5px;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .calculator-cell {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-bottom: 10px;
 }
 
 .calculator-cell label {
@@ -21,5 +28,17 @@
 .calculator-cell .result {
   display: inline-flex;
   margin-right: 0px;
-  justify-content: flex-end;
+  justify-content: flex-start;
+}
+
+@media (min-width: 576px) {
+  .calculator-cell {
+    margin-bottom: 0px;
+  }
+  .calculator-input {
+    margin-right: 20px;
+  }
+  .calculator-cell .result {
+    justify-content: flex-end;
+  }
 }
